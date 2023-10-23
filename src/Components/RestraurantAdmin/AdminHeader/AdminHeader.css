@@ -1,0 +1,53 @@
+.header{
+    background-image: url("https://b.zmtcdn.com/mx-onboarding-hero87f77501659a5656cad54d98e72bf0d81627911821.webp");
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight:700;
+    padding-top: 20px;
+}
+
+.nav-links{
+    display:flex;
+    /* justify-content: space-between; */
+    margin-left: 50px;
+}
+
+.nav-link{
+    margin-left: 20px;
+}
+
+.nav-center{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 210px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 100px;
+}
+
+.nav-link:hover{
+    color: blueviolet;
+}
+
+@media screen and (max-widht: 600px) {
+    .media{
+        width: 60px;
+    };
+
+    .nav-center{
+        display: flex;
+        flex-direction: column;
+        font-size: 5px;
+    }
+
+
+}

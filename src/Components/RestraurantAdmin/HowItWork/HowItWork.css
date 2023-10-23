@@ -1,0 +1,12 @@
+.card img{
+    height: 50px;
+    width: 80px;
+    margin-left: 40%;
+}
+
+.card{
+    text-align: center;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,26 @@
+.hero-box-1{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR30VrECaKJfUskhvt0KsvdeQKAGarofLIbWA&usqp=CAU");
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: 780px 500px;
+
+}
+
+.box{
+    border-radius: 35px;
+}
+
+
+.how-work{
+    background-image: url("https://b.zmtcdn.com/merchant-onboarding/f57794be6408563354c463c702ab45b91600672364.png");
+    background-size: cover;
+}
+
+/* .card-container{
+    margin-left: 20%;
+} */
+
+.headin h1{
+    font-size: 35px;
+    font-weight: 500;
+}

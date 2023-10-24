@@ -11,6 +11,10 @@ import FoodCard from './Components/FoodCards/FoodCard';
 import RestaurantDashboard from './Components/RestraurantAdmin/RestaurantDashboard/RestaurantDashboard';
 import CreateFoodItem from './Components/RestraurantAdmin/CreateFoodItem/CreateFoodItem';
 import RestaurantCards from './Components/RestraurantAdmin/RestaurantCards/RestaurantCards';
+import EditFoodItem from './Components/RestraurantAdmin/EditFoodItem/EditFoodItem';
+import CustomerDashboard from './Components/CustomerDasboard/CustomerDashboard';
+import NotFound from './Pages/NotFound/NotFound';
+import CustomerAllRestaurants from './Components/CustomerAllRestaurants/CustomerAllRestaurants';
 
 
 function App() {
@@ -28,10 +32,14 @@ function App() {
         <Route path='/addrestaurant' element={<RestaurantAdmin/>}/>
         <Route path='/restaurantregister' element={<RestauarntRegister/>}/>
         <Route path='restaurantlogin' element={<RestaurantLogin/>}/>
-        <Route path='/foodcards' element={<FoodCard/>}/>
+        <Route path='/allrestaurants' element={<CustomerAllRestaurants/>}/>
         <Route path='/restaurantdashboard' element={<RestaurantDashboard restaurantToken={restaurantToken} setRestaurantToken={setRestaurantToken}/>}/>
         <Route path='/createfooditem' element={<CreateFoodItem restaurantToken={restaurantToken} setRestaurantToken={setRestaurantToken} />}/>
         <Route path='/restaurantfoodcard' element={<RestaurantCards restaurantToken={restaurantToken} setRestaurantToken={setRestaurantToken} />}/>
+        <Route path="/editfooditem/:id" element={<EditFoodItem/>}/>
+        <Route path="/customerdashboard" element={<CustomerDashboard/>}/>
+
+        <Route path="*" element={<NotFound/>}/>
 
       </Routes>
     </Router>

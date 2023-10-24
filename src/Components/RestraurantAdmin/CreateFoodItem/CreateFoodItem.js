@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate,Link } from 'react-router-dom';
 import axios from 'axios';
 
-const CreateFoodItem = ({restaurantToken,setRestaurantToken}) => {
+const CreateFoodItem = () => {
 
+  const[restaurantToken,setRestaurantToken]=useState(localStorage.getItem("restaurant-token"));
+  console.log(restaurantToken);
     const[foodItems,setFoodItems]=useState({
         itemName:"",
         quantity:"",
@@ -12,7 +14,7 @@ const CreateFoodItem = ({restaurantToken,setRestaurantToken}) => {
         picture:""
     });
 
-    console.log(restaurantToken);
+    // console.log(restaurantToken);
 
     const {itemName,quantity,price,description,picture}=foodItems;
     console.log(foodItems);

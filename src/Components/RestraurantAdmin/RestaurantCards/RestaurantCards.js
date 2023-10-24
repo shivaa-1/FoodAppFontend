@@ -1,5 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
 
 const RestaurantCards = () => {
     const[restaurantToken,setRestaurantToken]=useState(localStorage.getItem("restaurant-token"));
@@ -9,35 +12,61 @@ const RestaurantCards = () => {
     let config = { headers:{ Authorization: `Bearer ${restaurantToken} `}};
 
     useEffect(()=>{
+        // console.log("rerender")
+        
         axios.get(restaurantItemsUrl,config).then((response)=>{
             console.log(response.data.data.restaurant[0].menu);
-            setFoodCards(response.data.data.restaurant[0].menu);
-        },[])
-    });
+            setFoodCards(response.data.data.restaurant[0].menu);            
+        })
+    },[]);
+
+    const handleDelete=(id)=>{
+        console.log(id);
+        const deleteUrl =`http://localhost:7000/api/restaurantadmin/removeitem/${id}`;
+
+        axios.delete(deleteUrl).then((response)=>{
+            console.log(response);
+            alert("Food Item Removed Successfully....")
+        })
+
+        };
 
     return (
         <>
         <div class="py-20">
-        <div class="container">
-            <div class="mx-auto max-w-4xl sm:text-center">
-                <img src="assets/images/landing/index-21.png" class="w-40 mx-auto" alt=""/>
-                {/* <h2 class="md:text-5xl text-3xl font-semibold tracking-tight">{foodCards.itemName}</h2> */}
-                <div class="flex justify-center">
-                    <p class="md:w-1/2 mt-6 text-xl/8 font-medium text-gray-500 dark:text-gray-400">We specialise in organising professional training courses.</p>
-                </div>
-            </div>
+        <div class="container">            
 
             <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-16">
                 {foodCards.map((items)=>{
-                    console.log(items);
+                    // console.log(items);
                     return(
-                        <div class="p-7 rounded-xl bg-gray-500" key={items._id}>
+                        
+                        <div class=" rounded-lg bg-gray-500 text-center" key={items._id}>
+                        
+
+                            <img src={items.picture} className="card-img-top" alt="..."/>
+
+                            <div className='d-flex food-card'>   
+                            <div className='left-part w-90'>
                             
-                                <img src={items.picture} className="card-img-top" alt="..."/>
-                                
-                                    <h2 className="cardsd-title text-xl font-semibold">{items.itemName}</h2>
-                                    <p className="cardds-text">{items.quantity}</p>
-                                    {/* <p className='price'>	&#8377; {items.}</p> */}
+                                <h2 className="cardsd-title text-xl font-semibold">{items.itemName}</h2>
+                                <p className="cardds-text">Quantity - {items.quantity}</p>
+                                <p>&#8377; {items.price}</p>
+                                <p>{items.description}</p>
+                        
+                            </div>
+                            <div className='right-part'>
+                                <div className='my-2'>
+                                <Link to={`/editfooditem/${items._id}`} className='mx-5'><EditIcon/></Link>
+                                </div>
+                                <div class="mt-2">
+                                <button onClick={()=>handleDelete(items._id)} className='stroke-2'><DeleteForeverIcon/></button>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+                            
                             
                         </div>
                     )            

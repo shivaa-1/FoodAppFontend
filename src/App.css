@@ -41,3 +41,7 @@
 input{
   padding: 5px 5px 5px 10px;
 }
+
+.food-card .left-part{
+  width: 80%;
+}

@@ -39,7 +39,7 @@ const UserLoginPage =()=>{
             if(response.status===200){
               localStorage.setItem("user-Token",response.data.token)
             };
-            navigate("/foodcards");//redirect to home page
+            navigate("/customerdashboard");//redirect to home page
         }).catch((error)=>{
             alert("Login failed...");
             console.log(error);

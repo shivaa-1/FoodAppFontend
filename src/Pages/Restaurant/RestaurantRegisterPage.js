@@ -23,7 +23,7 @@ const RestaurantRegisterPage =()=>{
   const handleSubmit=(e)=>{
     e.preventDefault();
 
-    const registerUrl = "http://localhost:7000/api/restaurantuser/register";
+    const registerUrl = "https://foodapp-szso.onrender.com/api/restaurantuser/register";
 
     axios.post(registerUrl,{
       restaurantName,
@@ -35,7 +35,7 @@ const RestaurantRegisterPage =()=>{
     }).then((response)=>{
       // console.log(response);
       alert("Restauarnt Register Successfully...")
-      navigate('/');
+      navigate('/addrestaurant');
     }).catch((error)=>{
       // console.log(error);
       alert("Restaurant Register Failed Please Try Again...")

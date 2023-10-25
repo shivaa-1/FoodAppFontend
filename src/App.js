@@ -20,7 +20,7 @@ import CustomerAllRestaurants from './Components/CustomerAllRestaurants/Customer
 function App() {
   const [userToken, setUserToken]=useState(localStorage.getItem("user-token"));
   const[restaurantToken,setRestaurantToken]=useState(localStorage.getItem("restaurant-token"));
-  console.log(restaurantToken);
+  // console.log(restaurantToken);
   return (
     <>
     <Router>

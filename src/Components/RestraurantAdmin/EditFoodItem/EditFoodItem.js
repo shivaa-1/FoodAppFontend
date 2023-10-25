@@ -23,7 +23,7 @@ const EditFoodItem = () => {
     const handleSubmit=(e)=>{
         e.preventDefault();
 
-        const editUrl = `http://localhost:7000/api/restaurantadmin/updateitem/${id}`
+        const editUrl = `https://foodapp-szso.onrender.com/api/restaurantadmin/updateitem/${id}`
 
         axios.put(editUrl,{
           itemName,

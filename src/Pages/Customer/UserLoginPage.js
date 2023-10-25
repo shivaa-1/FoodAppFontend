@@ -26,7 +26,7 @@ const UserLoginPage =()=>{
 
         //define login api endpoint
         // const loginURL="http://localhost:5000/api/users/login";
-        const loginURL="http://localhost:7000/api/users/login"
+        const loginURL="https://foodapp-szso.onrender.com/api/users/login"
         //send a data using post ->email,password
         axios.post(loginURL,{
             email,

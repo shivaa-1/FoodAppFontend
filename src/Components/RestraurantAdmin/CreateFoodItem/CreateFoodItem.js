@@ -33,7 +33,7 @@ const CreateFoodItem = () => {
         const handleSubmit=async (e)=>{
             e.preventDefault();
 
-            const itemUrl = "http://localhost:7000/api/restaurantadmin/createfooditem"
+            const itemUrl = "https://foodapp-szso.onrender.com/api/restaurantadmin/createfooditem"
 
             // let config = {headers:{Authorization:}}
 

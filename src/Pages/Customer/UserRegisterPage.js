@@ -23,7 +23,7 @@ const UserRegisterPage = () => {
   const handleSubmit=(e)=>{
     e.preventDefault();
 
-    const registerUrl = "http://localhost:7000/api/users/register";
+    const registerUrl = "https://foodapp-szso.onrender.com/api/users/register";
 
     axios.post(registerUrl,{
       name,

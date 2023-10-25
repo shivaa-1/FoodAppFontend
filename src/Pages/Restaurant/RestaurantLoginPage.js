@@ -20,7 +20,7 @@ const RestauarntLoginPage=()=>{
     const handleSubmit =(e)=>{
         e.preventDefault();
 
-        const loginUrl="http://localhost:7000/api/restaurantuser/login"
+        const loginUrl= "https://foodapp-szso.onrender.com/api/restaurantuser/login";
 
         axios.post(loginUrl,{
             restaurantemail,
@@ -33,7 +33,7 @@ const RestauarntLoginPage=()=>{
             };
             navigate('/restaurantdashboard');
         }).catch((error)=>{
-            // console.log(error);
+            console.log(error);
             alert("Login Failed...")
         })
     };

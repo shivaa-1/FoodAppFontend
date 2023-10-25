@@ -38,7 +38,7 @@ const RestaurantCards = () => {
 
     const handleDelete=(id)=>{
         // console.log(id);
-        const deleteUrl =`http://localhost:7000/api/restaurantadmin/removeitem/${id}`;
+        const deleteUrl =`https://foodapp-szso.onrender.com/api/restaurantadmin/removeitem/${id}`;
 
         axios.delete(deleteUrl).then((response)=>{
             // console.log(response);

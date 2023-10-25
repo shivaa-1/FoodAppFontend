@@ -23,7 +23,7 @@ const FoodCard = () => {
 
     const [foodCards,setFoodCards]=useState([]);
 
-    const itemsUrl = "http://localhost:7000/api/restaurantuser/allitems"
+    const itemsUrl = "https://foodapp-szso.onrender.com/api/restaurantuser/allitems"
     
     useEffect(()=>{
         axios.get(itemsUrl).then((response)=>{
@@ -41,7 +41,7 @@ const FoodCard = () => {
 
             <div class="grid my-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-16">
                 {foodCards.map((items)=>{
-                    console.log(items);
+                    // console.log(items);
                     return(
                         <div class="text-center rounded-lg bg-gray-500" key={items._id}>
 

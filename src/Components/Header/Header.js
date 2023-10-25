@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import './Header.css';
-const Header= ({userToken, setUserToken})=>{
-  console.log(userToken);
+const Header= ()=>{
+  // console.log(userToken);
     return(
         <>
             <div className="header">

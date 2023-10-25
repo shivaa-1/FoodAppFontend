@@ -32,8 +32,8 @@ const UserLoginPage =()=>{
             email,
             password
         }).then((response)=>{
-            console.log(response);
-            console.log(response.data.token);
+            // console.log(response);
+            // console.log(response.data.token);
 
             alert("Login Successfully...");
             if(response.status===200){
@@ -42,7 +42,7 @@ const UserLoginPage =()=>{
             navigate("/customerdashboard");//redirect to home page
         }).catch((error)=>{
             alert("Login failed...");
-            console.log(error);
+            // console.log(error);
         });
     };
 

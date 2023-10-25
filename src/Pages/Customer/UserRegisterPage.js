@@ -31,11 +31,11 @@ const UserRegisterPage = () => {
       mobile_no,
       password
     }).then((response)=>{
-      console.log(response);
+      // console.log(response);
       alert("Register Succesfully...");
       navigate('/');
     }).catch((error)=>{
-      console.log(error);
+      // console.log(error);
       alert("Registeration Failed...");
     })
   };

@@ -26,14 +26,14 @@ const RestauarntLoginPage=()=>{
             restaurantemail,
             password
         }).then((response)=>{
-          console.log(response.data);
+          // console.log(response.data);
             alert("Login Successfully...")
             if(response.status===200){
               localStorage.setItem("restaurant-token",response.data.token)
             };
             navigate('/restaurantdashboard');
         }).catch((error)=>{
-            console.log(error);
+            // console.log(error);
             alert("Login Failed...")
         })
     };

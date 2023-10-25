@@ -7,14 +7,19 @@ const FoodCard = () => {
 
     const[foodItems,setFoodItems]=useState(0);
 
+    localStorage.setItem("cartCount",foodItems);
+
     const handleItemIncrement =()=>{
         setFoodItems(foodItems+1);
     };
 
     const handleItemdecrement=()=>{
-        setFoodItems(foodItems-1);
+        if(foodItems===0){
+            return
+        }else{
+        setFoodItems(foodItems-1)
+        }
     };
-
 
     const [foodCards,setFoodCards]=useState([]);
 
@@ -22,8 +27,9 @@ const FoodCard = () => {
     
     useEffect(()=>{
         axios.get(itemsUrl).then((response)=>{
-            console.log(response);
+            // console.log(response);
             setFoodCards(response.data);
+            // localStorage.setItem("FoodItems")
         })
     },[]);
 
@@ -51,6 +57,7 @@ const FoodCard = () => {
                                 <h2 className="cardsd-title text-xl font-semibold">{items.itemName}</h2>
                                 <p className="cardds-text">{items.description}</p>
                                 <p className='price'>	&#8377; {items.price}</p>
+                                <p>{foodItems}</p>
                             </div>    
 
                             <div className='mt-3'>

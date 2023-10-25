@@ -33,11 +33,11 @@ const RestaurantRegisterPage =()=>{
       closingtime,
       password
     }).then((response)=>{
-      console.log(response);
+      // console.log(response);
       alert("Restauarnt Register Successfully...")
       navigate('/');
     }).catch((error)=>{
-      console.log(error);
+      // console.log(error);
       alert("Restaurant Register Failed Please Try Again...")
     });
 

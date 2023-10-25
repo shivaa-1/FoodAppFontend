@@ -32,7 +32,7 @@ const EditFoodItem = () => {
           description,
           picture
         }).then((response)=>{
-          console.log(response);
+          // console.log(response);
           alert("Item Updated Successfully");
           navigate("/restaurantdashboard");
         }).catch((error)=>{

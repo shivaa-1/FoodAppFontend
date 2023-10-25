@@ -5,6 +5,7 @@ import RestaurantCards from '../RestaurantCards/RestaurantCards';
 
 const RestaurantDashboard = ({restaurantToken,setRestaurantToken}) => {
     const navigate = useNavigate();
+// console.log(restaurantToken);
 
     useEffect(()=>{
         if(restaurantToken===null){
@@ -13,7 +14,7 @@ const RestaurantDashboard = ({restaurantToken,setRestaurantToken}) => {
         }else{
             navigate("/restaurantdashboard")
         }
-    },[navigate]);
+    },[navigate,restaurantToken]);
     
     return (
         <div>

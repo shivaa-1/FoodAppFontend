@@ -18,8 +18,6 @@ const CustomerAllRestaurants = () => {
         <>
         <h1 className='text-center font-bold text-xl font-7 my-5'>All Restaurants</h1>
         <div className="bg-gradient-to-bl from-blue-50 to-violet-50 flex items-center my-5 justify-center lg:h-screen">
-
-            ``
       <div className="container mx-auto mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
           {/* <!-- Replace this with your grid items --> */}

@@ -6,15 +6,6 @@ import RestaurantCards from '../RestaurantCards/RestaurantCards';
 const RestaurantDashboard = ({restaurantToken,setRestaurantToken}) => {
     const navigate = useNavigate();
 // console.log(restaurantToken);
-
-    useEffect(()=>{
-        if(restaurantToken===null){
-            alert("Please Login Again.....")
-            navigate("/addrestaurant")
-        }else{
-            navigate("/restaurantdashboard")
-        }
-    },[navigate,restaurantToken]);
     
     return (
         <div>
